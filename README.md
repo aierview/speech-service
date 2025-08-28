@@ -6,6 +6,17 @@ The **SpeechService** is responsible for **audio and text processing**, offering
 - **STT (Speech-to-Text)**: transcribes audio into text.
 
 ---
+## Architecture Overview
+
+The SpeechService follows a **procedural architecture**, which means that the execution flow is linear and step-by-step. Each module handles a specific task in sequence, allowing for simplicity, maintainability, and performance efficiency within the MVP scope.
+
+**Justification for using procedural architecture:**
+
+- **Simplicity**: Each process (TTS or STT) follows a clear sequence of operations, making the system easy to understand and maintain.
+- **Performance**: Direct execution of tasks reduces overhead associated with more complex architectural patterns.
+- **Maintainability**: Linear flows allow developers to easily locate and update functionality without navigating complex dependencies.
+- **MVP Focus**: Procedural architecture is sufficient for the current scale and requirements of the MVP, ensuring that TTS and STT processes are robust without overengineering.
+
 # 🔊 Text-to-Speech (TTS)
 
 The **TTS** module is designed to convert text into audio.
