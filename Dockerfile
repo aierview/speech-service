@@ -6,8 +6,6 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip
 RUN pip install uv
 
-ENV KAFKA_BOOTSTRAP=homolog-kafka.internal:9092
-
 WORKDIR /app
 COPY . /app
 

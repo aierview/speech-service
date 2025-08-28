@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  speach-service:
+    build:
+      context: speech-service/
+    container_name: speech-service
+    ports:
+      - "4000:4000"
+    environment:
+      - KAFKA_BOOTSTRAP=
+      - R2_ENDPOINT=
+      - R2_BUCKET=
+      - R2_ACCESS_KEY=
+      - R2_SECRET_KEY=
+      - R2_AUDIO_FILE_PATH=
+
+    networks:
+      - aierview-network
+
+networks:
+  aierview-network:
+    driver: bridge
+
