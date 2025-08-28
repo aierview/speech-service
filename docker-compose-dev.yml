@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  speach-service:
+    build:
+      context: speech-service/
+    container_name: speech-service
+    ports:
+      - "4000:4000"
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - R2_ENDPOINT=https://283e6e9dc708d4bdbad1869a11d5e4a9.r2.cloudflarestorage.com/aierview-bucket-dev
+      - R2_BUCKET=aierview-bucket-dev
+      - R2_ACCESS_KEY=66f30fc8100e6c054495b6fcda6c7bc1
+      - R2_SECRET_KEY=4b81017ab8e67f3a9d6a1cc23cd92349220535b678af0372bdde6ec3d528aa80
+      - R2_AUDIO_FILE_PATH=dev/tts-audios
+
+    networks:
+      - aierview-network
+
+networks:
+  aierview-network:
+    driver: bridge
+
