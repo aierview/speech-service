@@ -1,1 +1,10 @@
 .venv
+.gitignore
+.python-version
+docker-compose.yml
+docker-compose-dev.yml
+fly.toml
+pyproject.toml
+README.md
+speech-service.iml
+uv.lock

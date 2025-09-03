@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  speach-service:
+  speech-service:
     build:
       context: speech-service/
     container_name: speech-service
@@ -20,5 +20,4 @@ services:
 
 networks:
   aierview-network:
-    driver: bridge
-
+    external: true
