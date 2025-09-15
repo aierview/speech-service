@@ -1,13 +1,13 @@
-import boto3
-import json
-import numpy as np
-import os
-import soundfile as sf
-import uuid
-from botocore.client import Config
 from confluent_kafka import Consumer, Producer
+from botocore.client import Config
 from dotenv import load_dotenv
 from kokoro import KPipeline
+import soundfile as sf
+import numpy as np
+import boto3
+import json
+import uuid
+import os
 
 # LOADING ENV
 load_dotenv()

@@ -1,11 +1,11 @@
-import boto3
-import json
-import os
-import uuid
-from botocore.client import Config
 from confluent_kafka import Consumer, Producer
+from botocore.client import Config
 from dotenv import load_dotenv
 import whisper
+import boto3
+import json
+import uuid
+import os
 
 # LOADING ENV
 load_dotenv()

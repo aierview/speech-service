@@ -12,4 +12,6 @@ dependencies = [
     "python-dotenv>=1.1.1",
     "soundfile>=0.13.1",
     "openai-whisper>=20250625",
+    "py-eureka-client>=0.11.13",
+    "prometheus-client>=0.22.1"
 ]
